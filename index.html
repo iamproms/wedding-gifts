@@ -1,58 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wedding of Rachel & Frank - Gift Information</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@300;400;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@300;400;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
     <div class="page-border"></div>
-    
+
     <header class="hero" id="home">
         <div class="container hero-content">
-            <div class="floral-motif floral-top-right"></div>
+            <div class="floral-motif floral-top-right" role="img" aria-label="Decorative floral motif top right"></div>
             <div class="scroll-reveal">
                 <p class="hero-label">The Wedding of</p>
                 <h1 class="couple-names">Dr. Rachel Onyiri <br>& <br> Dr. Frank Chigozirim Weje</h1>
-                <p class="wedding-date">March 7th, 2025</p>
+                <p class="wedding-date">Friday, March 7th, 2025</p>
                 <div class="gold-divider"></div>
             </div>
         </div>
     </header>
 
     <main>
-        <section class="appreciation" id="appreciation">
+        <section class="appreciation" id="appreciation" aria-labelledby="appreciation-title">
             <div class="container text-center scroll-reveal">
-                <h2 class="section-title">A Message of Gratitude</h2>
+                <h2 id="appreciation-title" class="section-title">With Heartfelt Gratitude</h2>
                 <div class="message-content">
-                    <p>Your presence at our wedding is the greatest gift we could receive. The love and support of our family and friends mean everything to us as we begin our journey together.</p>
-                    <p>While physical gifts are not required, we know some may wish to bless our new home with a monetary token. We have provided our details below for your convenience.</p>
+                    <p>Your love, presence, and prayers are the greatest gifts we could ever receive as we begin our
+                        life together.</p>
+                    <p>Should you wish to further honor our union with a monetary gift, we have provided the details
+                        below. We are deeply touched by your generosity and support.</p>
                 </div>
                 <div class="gold-divider small"></div>
             </div>
         </section>
 
-        <section class="love-story" id="love-story">
+        <section class="love-story" id="love-story" aria-labelledby="story-title">
             <div class="container scroll-reveal">
-                <h2 class="section-title">Our Love Story</h2>
+                <h2 id="story-title" class="section-title">A Journey of Love</h2>
                 <div class="story-grid">
                     <div class="story-text">
-                        <p>Our journey began with a shared vision and a commitment to service. From long conversations about our dreams to the quiet moments of understanding, we found in each other a partner for life.</p>
-                        <p>As we stand before God and our loved ones, we celebrate the bond that has grown stronger through every season. We are honored to have you witness our union.</p>
+                        <p>Our story is one of shared dreams and a mutual commitment to a life of purpose. In each
+                            other, we have found a partner, a confidant, and a best friend.</p>
+                        <p>As we celebrate this beautiful milestone, we are honored to share our joy with the family and
+                            friends who have shaped us into who we are today.</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="gift-details" id="gifts">
+        <section class="gift-details" id="gifts" aria-labelledby="gift-title">
             <div class="container scroll-reveal">
-                <h2 class="section-title">Gift Information</h2>
-                <p class="text-center subtitle">For those who wish to send a blessing</p>
-                
+                <h2 id="gift-title" class="section-title">Gift Registry</h2>
+                <p class="text-center subtitle">For those who wish to bless the couple</p>
+
                 <div class="account-cards">
                     <!-- Account Card 1 -->
                     <div class="account-card">
@@ -65,10 +73,15 @@
                             </div>
                             <div class="info-group">
                                 <label>Account Number</label>
+                                <p class="copy-instruction">Tap the button to copy the account number</p>
                                 <div class="copy-field">
                                     <span id="acct-num-1">0123456789</span>
-                                    <button onclick="copyToClipboard('acct-num-1', this)" class="copy-btn">
-                                        <svg viewBox="0 0 24 24" width="18" height="18"><path fill="currentColor" d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"/></svg>
+                                    <button onclick="copyToClipboard('acct-num-1', this)" class="copy-btn"
+                                        aria-label="Copy Rachel Onyiri's account number">
+                                        <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
+                                            <path fill="currentColor"
+                                                d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z" />
+                                        </svg>
                                         Copy
                                     </button>
                                 </div>
@@ -87,10 +100,15 @@
                             </div>
                             <div class="info-group">
                                 <label>Account Number</label>
+                                <p class="copy-instruction">Tap the button to copy the account number</p>
                                 <div class="copy-field">
                                     <span id="acct-num-2">9876543210</span>
-                                    <button onclick="copyToClipboard('acct-num-2', this)" class="copy-btn">
-                                        <svg viewBox="0 0 24 24" width="18" height="18"><path fill="currentColor" d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"/></svg>
+                                    <button onclick="copyToClipboard('acct-num-2', this)" class="copy-btn"
+                                        aria-label="Copy Frank Weje's account number">
+                                        <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
+                                            <path fill="currentColor"
+                                                d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z" />
+                                        </svg>
                                         Copy
                                     </button>
                                 </div>
@@ -104,14 +122,16 @@
 
     <footer class="footer">
         <div class="container text-center">
-            <h2 class="couple-initials">R & F</h2>
+            <h2 class="couple-initials" aria-label="R and F initials">R & F</h2>
             <p class="footer-message">With love and gratitude,</p>
             <p class="footer-names">Rachel & Frank</p>
             <p class="footer-date">07.03.2025</p>
-            <div class="floral-motif floral-bottom-left"></div>
+            <div class="floral-motif floral-bottom-left" role="img" aria-label="Decorative floral motif bottom left">
+            </div>
         </div>
     </footer>
 
     <script src="js/script.js"></script>
 </body>
+
 </html>
