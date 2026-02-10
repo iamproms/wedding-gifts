@@ -52,6 +52,10 @@ body {
     text-align: center;
 }
 
+.no-wrap {
+    white-space: nowrap;
+}
+
 /* Page Border */
 .page-border {
     position: fixed;
