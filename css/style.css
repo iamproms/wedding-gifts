@@ -35,6 +35,8 @@ body {
     color: var(--text-color);
     font-family: var(--body-font);
     line-height: 1.6;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400' viewBox='0 0 400 400'%3E%3Cpath fill='%232D4F2D' fill-opacity='0.02' d='M30,150 Q50,50 150,30 Q250,50 270,150 Q250,250 150,270 Q50,250 30,150 Z m170,100 Q200,300 300,320 Q400,300 380,200 Q400,100 300,80 Q200,100 200,250 Z'/%3E%3C/svg%3E");
+    background-attachment: fixed;
 }
 
 .container {
@@ -71,19 +73,28 @@ h3 {
 }
 
 .section-title {
-    font-size: 2.2rem;
-    margin-bottom: 1.5rem;
+    font-size: 2.4rem;
+    margin-bottom: 2rem;
     position: relative;
     display: inline-block;
     color: var(--forest-green);
 }
 
+.section-title::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 2px;
+    background: var(--gold);
+    margin: 1rem auto 0;
+}
+
 .subtitle {
-    font-size: 0.85rem;
+    font-size: 0.8rem;
     text-transform: uppercase;
-    letter-spacing: 3px;
+    letter-spacing: 4px;
     color: var(--burnt-orange);
-    margin-bottom: 2.5rem;
+    margin-bottom: 3rem;
     font-weight: 600;
 }
 
@@ -94,94 +105,96 @@ h3 {
     align-items: center;
     justify-content: center;
     text-align: center;
-    background: linear-gradient(rgba(253, 252, 248, 0.85), rgba(253, 252, 248, 0.85)),
+    background: linear-gradient(rgba(253, 252, 248, 0.88), rgba(253, 252, 248, 0.88)),
         url('https://www.transparenttextures.com/patterns/natural-paper.png');
     position: relative;
-    padding: 4rem 1rem;
+    padding: 6rem 1rem;
+    border-bottom: 1px solid var(--gold-light);
 }
 
 .hero-label {
     font-family: var(--body-font);
     text-transform: uppercase;
-    letter-spacing: 5px;
-    font-size: 0.75rem;
-    margin-bottom: 1.5rem;
+    letter-spacing: 6px;
+    font-size: 0.7rem;
+    margin-bottom: 2rem;
     color: var(--forest-green);
-    font-weight: 400;
+    font-weight: 500;
 }
 
 .couple-names {
     font-family: var(--script-font);
-    font-size: clamp(2.8rem, 12vw, 5rem);
-    line-height: 1.1;
+    font-size: clamp(3.5rem, 15vw, 6rem);
+    line-height: 1;
     color: var(--burnt-orange);
-    margin-bottom: 1.5rem;
+    margin-bottom: 2rem;
 }
 
 .wedding-date {
     font-family: var(--heading-font);
-    font-size: 1.3rem;
-    letter-spacing: 3px;
+    font-size: 1.4rem;
+    letter-spacing: 4px;
     color: var(--coffee-brown);
-    margin-top: 1rem;
+    margin-top: 2rem;
 }
 
 /* Dividers */
 .gold-divider {
     height: 1px;
     background: linear-gradient(90deg, transparent, var(--gold), transparent);
-    width: 70%;
-    margin: 2.5rem auto;
+    width: 80%;
+    margin: 3rem auto;
 }
 
 .gold-divider.small {
-    width: 40%;
+    width: 50%;
 }
 
 /* Sections */
 section {
-    padding: 8rem 0;
+    padding: 10rem 0;
 }
 
 .appreciation {
     background-color: var(--white);
-    border-top: 5px solid var(--forest-green);
+    position: relative;
 }
 
 .message-content p {
-    margin-bottom: 1.8rem;
-    font-size: 1.15rem;
+    margin-bottom: 2rem;
+    font-size: 1.2rem;
     font-weight: 300;
-    max-width: 650px;
+    max-width: 600px;
     margin-left: auto;
     margin-right: auto;
+    color: var(--text-color);
 }
 
 /* Account Cards */
 .account-cards {
     display: flex;
     flex-direction: column;
-    gap: 2.5rem;
-    margin-top: 3.5rem;
+    gap: 3rem;
+    margin-top: 4rem;
     width: 100%;
 }
 
 .account-card {
     background: var(--white);
-    padding: 2.5rem 2rem;
-    border-radius: 8px;
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.05);
+    padding: 3rem 2rem;
+    border-radius: 12px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.04);
     position: relative;
     border: 1px solid var(--gold-light);
-    transition: all 0.4s ease;
+    transition: all 0.5s cubic-bezier(0.22, 1, 0.36, 1);
     width: 100%;
-    max-width: 500px;
+    max-width: 550px;
     margin: 0 auto;
 }
 
 .account-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 20px 50px rgba(179, 82, 44, 0.1);
+    transform: translateY(-10px);
+    box-shadow: 0 30px 60px rgba(179, 82, 44, 0.12);
     border-color: var(--gold);
 }
 
@@ -190,15 +203,16 @@ section {
     top: 0;
     left: 0;
     width: 100%;
-    height: 6px;
-    background: linear-gradient(90deg, var(--forest-green), var(--burnt-orange));
-    border-radius: 8px 8px 0 0;
+    height: 8px;
+    background: linear-gradient(90deg, var(--forest-green), var(--burnt-orange), var(--forest-green));
+    border-radius: 12px 12px 0 0;
 }
 
 .acct-holder {
-    font-size: 1.6rem;
-    margin-bottom: 2rem;
+    font-size: 1.8rem;
+    margin-bottom: 2.5rem;
     color: var(--coffee-brown);
+    letter-spacing: 1px;
 }
 
 .acct-info .info-group {
@@ -207,45 +221,48 @@ section {
 }
 
 .info-group label {
-    font-size: 0.75rem;
+    font-size: 0.8rem;
     text-transform: uppercase;
-    letter-spacing: 2px;
+    letter-spacing: 2.5px;
     color: var(--gold-dark);
     display: block;
-    margin-bottom: 0.6rem;
-    font-weight: 600;
+    margin-bottom: 0.8rem;
+    font-weight: 700;
 }
 
 .info-group p {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     font-weight: 600;
     color: var(--coffee-brown);
+    margin-bottom: 1rem;
 }
 
 .copy-instruction {
-    font-size: 0.85rem;
+    font-size: 0.75rem;
     color: var(--forest-green);
-    margin-bottom: 1.5rem;
+    margin-top: 0.8rem;
     font-style: italic;
-    font-weight: 500;
+    opacity: 0.8;
+    letter-spacing: 1px;
 }
 
 .copy-field {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background: #F9F7F2;
-    padding: 1rem;
-    border-radius: 6px;
+    background: #FFFAF0;
+    padding: 1.2rem;
+    border-radius: 8px;
     border: 1px solid var(--gold-light);
-    gap: 1rem;
+    gap: 1.5rem;
+    margin-bottom: 0.5rem;
 }
 
 .copy-field span {
     font-family: 'Courier New', Courier, monospace;
-    font-size: 1.3rem;
+    font-size: 1.4rem;
     font-weight: 700;
-    letter-spacing: 2px;
+    letter-spacing: 3px;
     color: var(--coffee-brown);
 }
 
@@ -253,24 +270,25 @@ section {
     background: var(--burnt-orange);
     color: white;
     border: none;
-    padding: 0.7rem 1.2rem;
-    border-radius: 4px;
+    padding: 0.8rem 1.4rem;
+    border-radius: 6px;
     cursor: pointer;
     font-family: var(--body-font);
-    font-size: 0.85rem;
+    font-size: 0.9rem;
     font-weight: 600;
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 0.5rem;
+    gap: 0.6rem;
     transition: all 0.3s ease;
-    min-width: 100px;
-    box-shadow: 0 4px 10px rgba(179, 82, 44, 0.2);
+    min-width: 110px;
+    box-shadow: 0 6px 15px rgba(179, 82, 44, 0.25);
 }
 
 .copy-btn:hover {
     background: var(--burnt-orange-dark);
-    transform: scale(1.02);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(179, 82, 44, 0.35);
 }
 
 .copy-btn:active {
@@ -279,12 +297,11 @@ section {
 
 .copy-btn.copied {
     background: var(--forest-green);
-    box-shadow: 0 4px 10px rgba(45, 79, 45, 0.2);
 }
 
 /* Footer & Closing */
 .footer {
-    padding: 8rem 0;
+    padding: 10rem 0;
     background-color: var(--coffee-brown);
     color: var(--gold-light);
     position: relative;
@@ -293,16 +310,16 @@ section {
 
 .couple-initials {
     font-family: var(--script-font);
-    font-size: 4rem;
+    font-size: 5rem;
     color: var(--gold);
-    margin-bottom: 1.5rem;
+    margin-bottom: 2rem;
 }
 
 .footer-names {
     font-family: var(--heading-font);
-    font-size: 1.4rem;
-    margin: 1rem 0;
-    letter-spacing: 2px;
+    font-size: 1.6rem;
+    margin: 1.5rem 0;
+    letter-spacing: 3px;
 }
 
 .footer-date {
@@ -315,7 +332,7 @@ section {
 /* Animations */
 .scroll-reveal {
     opacity: 0;
-    transform: translateY(30px);
+    transform: translateY(40px);
     transition: var(--transition-slow);
 }
 
@@ -324,29 +341,35 @@ section {
     transform: translateY(0);
 }
 
-/* Decorative Motifs (SVGs) */
+/* Sophisticated Floral SVGs */
 .floral-motif {
     position: absolute;
-    width: 280px;
-    height: 280px;
-    opacity: 0.15;
+    width: 350px;
+    height: 350px;
+    opacity: 0.2;
     background-repeat: no-repeat;
     background-size: contain;
     z-index: 1;
     pointer-events: none;
 }
 
-.floral-top-right {
-    top: -30px;
-    right: -30px;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath fill='%232D4F2D' d='M90,10 Q70,10 50,40 Q30,70 10,90 Q40,70 70,50 Q90,30 90,10'/%3E%3Cpath fill='%23CFB53B' d='M85,15 Q65,15 45,45 Q25,75 5,95 Q35,75 65,55 Q85,35 85,15'/%3E%3C/svg%3E");
+.floral-hero-1 {
+    top: -50px;
+    right: -50px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'%3E%3Cpath fill='%232D4F2D' d='M200,0 Q170,0 140,40 Q110,80 80,120 Q120,80 160,40 Q200,0 200,0'/%3E%3Cpath fill='%23B3522C' d='M180,20 Q150,20 120,60 Q90,100 60,140 Q100,100 140,60 Q180,20 180,20'/%3E%3Ccircle cx='190' cy='10' r='5' fill='%23D4AF37'/%3E%3C/svg%3E");
 }
 
-.floral-bottom-left {
-    bottom: -30px;
-    left: -30px;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath fill='%23CFB53B' d='M10,90 Q30,90 50,60 Q70,30 90,10 Q60,30 30,50 Q10,70 10,90'/%3E%3C/svg%3E");
-    transform: rotate(180deg);
+.floral-hero-2 {
+    bottom: -50px;
+    left: -50px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'%3E%3Cpath fill='%232D4F2D' d='M0,200 Q30,200 60,160 Q90,120 120,80 Q80,120 40,160 Q0,200 0,200'/%3E%3Cpath fill='%23D4AF37' d='M20,180 Q50,180 80,140 Q110,100 140,60 Q100,100 60,140 Q20,180 20,180'/%3E%3C/svg%3E");
+}
+
+.floral-footer {
+    bottom: -80px;
+    right: -80px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'%3E%3Cpath fill='%23D4AF37' d='M200,200 Q150,200 100,150 Q50,100 0,50 Q100,100 150,150 Q200,200 200,200'/%3E%3C/svg%3E");
+    opacity: 0.1;
 }
 
 /* Accessibility Focus States */
@@ -358,34 +381,44 @@ button:focus {
 /* Responsive adjustments */
 @media (max-width: 600px) {
     .section-title {
-        font-size: 1.8rem;
+        font-size: 2rem;
     }
 
     section {
-        padding: 5rem 0;
+        padding: 8rem 0;
     }
 
     .hero {
-        padding: 2rem 1rem;
+        padding: 4rem 1.5rem;
     }
 
     .container {
         padding: 0 1.5rem;
     }
 
+    .couple-names {
+        font-size: 3.2rem;
+    }
+
     .account-card {
-        padding: 2rem 1.5rem;
+        padding: 2.5rem 1.5rem;
     }
 
     .copy-field {
         flex-direction: column;
         align-items: stretch;
         text-align: center;
+        padding: 1rem;
     }
 
     .copy-field span {
-        font-size: 1.15rem;
-        margin-bottom: 0.5rem;
+        font-size: 1.2rem;
+        margin-bottom: 0.8rem;
+        letter-spacing: 2px;
+    }
+
+    .copy-btn {
+        width: 100%;
     }
 
     .page-border {
@@ -398,10 +431,6 @@ button:focus {
 
 @media (max-width: 350px) {
     .couple-names {
-        font-size: 2.5rem;
-    }
-
-    .section-title {
-        font-size: 1.5rem;
+        font-size: 2.8rem;
     }
 }
